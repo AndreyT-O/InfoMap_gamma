@@ -1,0 +1,169 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+@import '~vueperslides/dist/vueperslides.css';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import '~admin-lte/dist/css/adminlte.min.css';
+
+@import '~admin-lte/plugins/fontawesome-free/css/all.min.css';
+
+
+
+.main-sidebar {
+    height: 100vh!important;
+}
+.content-wrapper {
+    height: 100vh!important;
+}
+#warder{
+    height: 100vh;
+    overflow:hidden;
+    font-size:16px;
+    input{
+        font-size:18px;
+    }
+    .nav-item {
+        cursor: pointer;
+    }
+    .content-wrapper{
+        height: auto;
+        overflow: auto;
+        height: 92vh!important;
+        .content{
+            width: 100%;
+            height: 400px;
+            padding:0;
+            margin:0;  
+                .vue-map-container {
+                    width: 100%;
+                    height:400px;
+                }
+                .createMarker{
+                    position:relative;
+                    top:-90px;
+                    border-radius:50px;
+                    border:none;
+                    background:#27a4d4;
+                    padding:10px;
+                    margin-right:60px;
+                    transition: .4s;
+                    cursor:pointer;
+                    &:focus{
+                        outline: none;
+                        color:rgb(104, 173, 104);
+                    }
+                    i{
+                        color:#fff;
+                        padding:10px;
+                        font-size:25px;
+                        cursor:pointer;
+                    }
+                    &:hover{
+                        background:#87c8e2; 
+                    }
+            }
+            .info{
+                .preview{
+                    display:flex;
+                    height: 400px;
+                    .form-image{
+                        height: inherit;
+                        width: 45%;
+                        float: left;
+                        background: #a58daf;
+                        margin-right: 10px;
+                        margin-left:auto;
+                        background-position: center;
+                        background-size: cover;
+                        transition:.3s;
+                        i{
+                        position: relative;
+                        top: -15px;
+                        left: -25px;
+                        color: #4a4040;
+                        transition: .3s;
+                        &:hover{
+                            color: #cab0b0;
+                        }
+                    }
+                    }
+                    .form-map{
+                        height: inherit;
+                        width: 45%;
+                        float: right;
+                        background: blue;
+                        margin-right:auto;
+                    }
+                    .vue-map-container{
+                        height: inherit;
+                    }
+                }
+                .cardReview{
+                    background:#fff;
+                    border-radius:20px;
+                }
+            }
+        }
+    }
+}
+
+/*
+* VuewperSlider style
+*/
+.primary {
+    .vueperslides {
+        &__arrow {
+            font-size:10px;
+            background:#000;
+            opacity:.4;
+            transition: 1s;
+            &:focus {
+                outline:none;
+            }
+            &:hover {
+                opacity:1;
+            }
+        }
+        &__progress {
+            color:#ae0ea4;
+            opacity:.7;
+            div {
+                border-radius:0 0 10px 0;
+            }
+        }
+    }
+}
+.thumbnails {
+    margin-bottom: 1em!important;
+    .vueperslide {
+        background-size:120px;
+        background-repeat: no-repeat;
+        &--active {
+            .vueperslide__image {
+                border:2px solid black;
+            }
+        }
+        &__image {
+            margin:10px;
+        }
+        &__parallax-wrapper {
+            border-radius:10px;
+        }
+        .deleteImg {
+            position:absolute;
+            left:calc(100% - 30px);
+            top:15px;
+            color:#d2cccc;
+            cursor:pointer;
+            &:hover {
+                color:#a09d9d;
+            }
+        }
+    }
+}
