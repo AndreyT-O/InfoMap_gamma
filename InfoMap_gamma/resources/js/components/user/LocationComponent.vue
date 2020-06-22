@@ -122,7 +122,7 @@
                 this.$route.name == 'userLocation'?
                 this.$router.push({name: 'userMap'}):
                 this.$router.push({name: 'map'});
-                // this.$store.dispatch('ADD_MARKERS');
+                this.$store.dispatch('ADD_MARKERS');
             },
             /**
              * Method delete location

@@ -2281,14 +2281,22 @@ __webpack_require__.r(__webpack_exports__);
      */
     onMarkerClick: function onMarkerClick(e, marker, id) {
       if (this.$router.name != 'userUpdateLocation') {
+        this.markers.forEach(function (element) {
+          element.icon = '';
+        });
         this.center = {
           lat: e.latLng.lat() - 0.02317,
           lng: e.latLng.lng() - 2.18079
-        }; // marker.icon = {
-        //     url:"https://www.pinclipart.com/picdir/big/17-171343_maps-clipart-map-pin-google-maps-marker-blue.png",
-        //     scaledSize: { width: 27, height: 43, f: "px", b: "px" }
-        // }; 
-
+        };
+        marker.icon = {
+          url: "https://www.pinclipart.com/picdir/big/17-171343_maps-clipart-map-pin-google-maps-marker-blue.png",
+          scaledSize: {
+            width: 27,
+            height: 43,
+            f: "px",
+            b: "px"
+          }
+        };
         this.$store.dispatch('ADD_LOCATION', {
           id: id
         });
@@ -59355,9 +59363,9 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_2__["default"].Store({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\OSPanel\OSPanel\domains\InfoMap_gamma\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! D:\OSPanel\OSPanel\domains\InfoMap_gamma\resources\sass\appAdmin.scss */"./resources/sass/appAdmin.scss");
-module.exports = __webpack_require__(/*! D:\OSPanel\OSPanel\domains\InfoMap_gamma\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\Ideil\github\InfoMap_gamma\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! D:\Ideil\github\InfoMap_gamma\resources\sass\appAdmin.scss */"./resources/sass/appAdmin.scss");
+module.exports = __webpack_require__(/*! D:\Ideil\github\InfoMap_gamma\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

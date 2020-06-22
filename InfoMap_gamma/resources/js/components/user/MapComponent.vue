@@ -93,15 +93,19 @@
              */
             onMarkerClick(e,marker,id) {
                 if(this.$router.name != 'userUpdateLocation') {
+
+                    this.markers.forEach(element => {
+                        element.icon = '';
+                    });
                     
                     this.center = {
                         lat: e.latLng.lat() - 0.02317,
                         lng: e.latLng.lng() - 2.18079
                     }
-                    // marker.icon = {
-                    //     url:"https://www.pinclipart.com/picdir/big/17-171343_maps-clipart-map-pin-google-maps-marker-blue.png",
-                    //     scaledSize: { width: 27, height: 43, f: "px", b: "px" }
-                    // }; 
+                    marker.icon = {
+                        url:"https://www.pinclipart.com/picdir/big/17-171343_maps-clipart-map-pin-google-maps-marker-blue.png",
+                        scaledSize: { width: 27, height: 43, f: "px", b: "px" }
+                    }; 
                     
                     this.$store.dispatch('ADD_LOCATION',{id: id});
                     this.activeUser > 0?
